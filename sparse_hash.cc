@@ -419,6 +419,7 @@ uint32_t SparseHashTable::HashFunction(const char *key, uint32_t len) {
 }
 
    /* we need a small function to figure out # of items set in the bm */
+// Hamming weight:https://en.wikipedia.org/wiki/Hamming_weight
 uint64_t SparseHashTable::EntriesUpto(HTBitmapPart *bm, uint64_t i)
 {                                       /* returns # of set bits in 0..i-1 */
    uint64_t retval = 0; 
